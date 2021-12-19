@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
     return mongoose.connect('mongodb://mongo:27017/docker-node-mongo', { useNewUrlParser: true },
      function(err) {
         if (err) {
-            console.error('Failed to connect to mongo on startup - retrying in 1 sec', err);
+            console.error('Failedd to connect to mongo on startup - retrying in 1 sec', err);
             setTimeout(connectWithRetry, 1000);
         }
     });
